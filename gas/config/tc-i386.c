@@ -6140,7 +6140,7 @@ build_modrm_byte (void)
 	      op.bitfield.regmem = 0;
 	      if ((dest + 1) >= i.operands
 		  || (op.bitfield.reg32 != 1
-		      && !op.bitfield.reg64 != 1
+		      && op.bitfield.reg64
 		      && !operand_type_equal (&op, &regxmm)
 		      && !operand_type_equal (&op, &regymm)
 		      && !operand_type_equal (&op, &regzmm)

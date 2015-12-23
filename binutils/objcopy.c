@@ -1890,7 +1890,8 @@ copy_object (bfd *ibfd, bfd *obfd, const bfd_arch_info_type *input_arch)
 		/* Umm, not sure what to do in this case.  */
 		debuglink_vma = 0x1000;
 
-	      bfd_set_section_vma (obfd, gnu_debuglink_section, debuglink_vma);
+	      (void)bfd_set_section_vma (obfd, gnu_debuglink_section,
+                                         debuglink_vma);
 	    }
 	}
     }

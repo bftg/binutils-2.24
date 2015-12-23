@@ -363,7 +363,7 @@ record_alignment (/* Segment to which alignment pertains.  */
     return;
 
   if ((unsigned int) align > bfd_get_section_alignment (stdoutput, seg))
-    bfd_set_section_alignment (stdoutput, seg, align);
+    (void)bfd_set_section_alignment (stdoutput, seg, align);
 }
 
 int
